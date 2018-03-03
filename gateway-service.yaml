@@ -10,6 +10,11 @@ security:
   basic:
     enabled: false
 
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+
 management:
   security:
     enabled: false
@@ -27,10 +32,15 @@ logging:
 ---
 spring:
   profiles: docker
+  cloud:
+    config:
+      uri: http://config-server:8888
+  application:
+    name: gateway-service
 
 eureka:
   instance:
-    hostname: event-service
+    hostname: gateway-service
   client:
    registerWithEureka: true
    fetchRegistry: true
@@ -39,6 +49,10 @@ eureka:
 endpoints:
  shutdown:
     enabled: true
+
+management:
+  security:
+    enabled: false
 
 #spring.boot.admin.url: http://turbine-service:8989
 management.security.enabled: false
