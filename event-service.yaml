@@ -4,13 +4,8 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-
+      
 #spring.boot.admin.url: http://localhost:8989
-
-spring:
-	cloud:
-		config:
-			uri: http://localhost:8888
 
 management:
 	security:
