@@ -4,6 +4,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/olha_database
     username: docker
     password: docker
+    tomcat:
+      max-idle: 5
+      max-active: 3
+      min-idle: 3
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
@@ -36,6 +40,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/olha_database
     username: docker
     password: docker
+    tomcat:
+      max-idle: 5
+      max-active: 3
+      min-idle: 3
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
